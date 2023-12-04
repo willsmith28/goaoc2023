@@ -4,19 +4,25 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/willsmith28/goaoc2023/pkg/days"
+	"github.com/willsmith28/goaoc2023/pkg/days/day01"
+	"github.com/willsmith28/goaoc2023/pkg/days/day02"
 )
 
 func DayRunner() {
 	inputDir := flag.String("input", "", "Path to input directory.")
 	runAll := flag.Bool("runall", false, "Run all days")
-	day01 := flag.Bool("day01", false, "Run all days")
+	runDay01 := flag.Bool("day01", false, "Run all days")
+	runDay02 := flag.Bool("day02", false, "Run all days")
 	flag.Parse()
 	if *runAll {
-		*day01 = true
+		*runDay01 = true
+		*runDay02 = true
 	}
 	fmt.Println(*inputDir)
-	if *day01 {
-		days.Day01(*inputDir)
+	if *runDay01 {
+		day01.Day01(*inputDir)
+	}
+	if *runDay02 {
+		day02.Day02(*inputDir)
 	}
 }

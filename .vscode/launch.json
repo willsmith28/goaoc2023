@@ -13,7 +13,7 @@
             "args": [
                 "--input",
                 "/home/will/Projects/goaoc2023/input",
-                "--day01"
+                "--day02"
             ]
         }
     ]
