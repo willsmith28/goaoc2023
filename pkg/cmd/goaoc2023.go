@@ -6,6 +6,7 @@ import (
 
 	"github.com/willsmith28/goaoc2023/pkg/days/day01"
 	"github.com/willsmith28/goaoc2023/pkg/days/day02"
+	"github.com/willsmith28/goaoc2023/pkg/days/day03"
 )
 
 func DayRunner() {
@@ -13,6 +14,7 @@ func DayRunner() {
 	runAll := flag.Bool("runall", false, "Run all days")
 	runDay01 := flag.Bool("day01", false, "Run all days")
 	runDay02 := flag.Bool("day02", false, "Run all days")
+	runDay03 := flag.Bool("day03", false, "Run all days")
 	flag.Parse()
 	if *runAll {
 		*runDay01 = true
@@ -24,5 +26,8 @@ func DayRunner() {
 	}
 	if *runDay02 {
 		day02.Day02(*inputDir)
+	}
+	if *runDay03 {
+		day03.Day03(*inputDir)
 	}
 }
